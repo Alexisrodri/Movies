@@ -65,7 +65,7 @@ useEffect(()=>{
               return(
                 <div key={datos.id} id="cont-pelis">
                   <picture className='picture'>
-                  <Link className='link' href='/Detalles'>
+                  <Link  href='/Detalles'>
                   <img src={`https://image.tmdb.org/t/p/w500${datos.poster_path || datos.profile_path}`} alt='peliculas' className='poster-img' />
                   </Link>
                   <div className="Ranking">
@@ -73,7 +73,7 @@ useEffect(()=>{
                   </div>  
                   </picture>
                   <div className='texts'>
-                  <Link href={`/Detalles/${datos.media_type}/${datos.id}`}>{datos.title || datos.original_name}</Link>
+                  <Link className='links-detalles' href={`/Detalles/${datos.media_type}/${datos.id}`}>{datos.title || datos.original_name}</Link>
                   <small>{datos.release_date || datos.first_air_date}</small>
                   </div>
                 </div>

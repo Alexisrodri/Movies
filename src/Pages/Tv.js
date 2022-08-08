@@ -46,7 +46,7 @@ useEffect(()=>{
                   </div>  
                   </picture>
                   <div className='texts'>
-                  <h3>{datos.title || datos.original_name}</h3>
+                  <Link className='links-detalles' href={`/Detalles/tv/${datos.id}`}>{datos.title || datos.original_name}</Link>
                   <small>{datos.release_date || datos.first_air_date}</small>
                   </div>
                 </div>
