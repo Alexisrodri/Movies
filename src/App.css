@@ -336,6 +336,13 @@ section.cont-busqueda {
   padding: 20px;
 }
 
+footer {
+  height: 200px;
+  background: #031a30;
+  color: #fff;
+  display: flex;
+}
+
 .links-footer{
   width:50%;
   display: flex;
