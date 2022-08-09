@@ -116,7 +116,7 @@ header{
 }
 
 .Busquedas {
-  width: 100%;
+  max-width: 50%;
   height: 350px;
   display: flex;
   justify-content: center;
