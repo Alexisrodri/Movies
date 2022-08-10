@@ -26,7 +26,7 @@ useEffect(()=>{
         <ul className="ul">
         <li className="li" ><Link href='/' className="link-header" >Inicio</Link></li>
         <li className="li" ><Link href='/Movies' className="link-header" >Peliculas</Link></li>
-        <li className="li" ><Link href='/Tv' className="link-header" >Series de tv</Link></li>
+        <li className="li" ><Link href='/Tv' className="link-header" >Series</Link></li>
         </ul>
         </nav>
     <h1>Movies</h1>
@@ -38,12 +38,7 @@ useEffect(()=>{
         return(
             <div key={datos.id} id="cont-pelis">
                   <picture className='picture'>
-                  <a className='link' href={`https://www.themoviedb.org/movie/${datos.id}`}>
                   <img src={`https://image.tmdb.org/t/p/w500${datos.poster_path || datos.profile_path}`} alt='peliculas' className='poster-img' />
-                  </a>
-                  <div className="Ranking">
-                  <h4>{Math.floor(datos.vote_average || datos.popularity)+'0%'}</h4>
-                  </div>  
                   </picture>
                   <div className='texts'>
                   <Link className='links-detalles' href={`/Detalles/movie/${datos.id}`}>{datos.title || datos.original_name}</Link>

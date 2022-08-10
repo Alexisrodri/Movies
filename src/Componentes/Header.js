@@ -11,21 +11,25 @@ const[datos,setDatos] = useState('')
    
    
 const APiFind = async(busqueda) =>{
-    setCargando(true)
+        setCargando(true)
         const res = await Search(busqueda)
         setDatos(res.results)
-        console.log(res);
         setCargando(false)
-}
-
-   const ChangesInput = (e) => {
-    e.preventDefault()
-    APiFind(busqueda)
+    }
+    
+    const ChangesInput = (e) => {
+        if(busqueda === ''){
+            console.log('vacio');
+        } else{
+        }
+        e.preventDefault()
+        APiFind(busqueda)
    }    
    
    const InputValor = (e) =>{
        setBusqueda(e.target.value)
    }
+
 
 
     return(
@@ -36,7 +40,7 @@ const APiFind = async(busqueda) =>{
         <ul className="ul">
         <li className="li" ><Link href='/' className="link-header" >Inicio</Link></li>
         <li className="li" ><Link href='/Movies' className="link-header" >Peliculas</Link></li>
-        <li className="li" ><Link href='/Tv' className="link-header" >Series de tv</Link></li>
+        <li className="li" ><Link href='/Tv' className="link-header" >Series</Link></li>
         </ul>
         </nav>
         <article className="Busquedas">
@@ -44,13 +48,13 @@ const APiFind = async(busqueda) =>{
         <h1 className="title-busqueda">Bienvenidos.</h1>
         <span>Millones de películas, programas de televisión y personas por descubrir. Explora ahora.</span>
         <form onSubmit={ChangesInput} >
-            <input type='text' className="input-busqueda" placeholder="Buscador..." onChange={InputValor}   />
+            <input type='text' className="input-busqueda" placeholder="Buscador..." onChange={InputValor}  />
             <button className="btn-busqueda">Search</button>
         </form>
-        <section className={`buscador-detalles ${busqueda.length <= 3 }`}>
+        <section className={`buscador-detalles ${busqueda.length <= 5 }`}>
             
             { cargando ? 
-            <h3>Cargando...</h3>
+            <h3>Buscando...</h3>
             :
             (
                 datos.map((dato)=>{

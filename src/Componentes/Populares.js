@@ -64,10 +64,8 @@ useEffect(()=>{
             data.map((datos)=>{
               return(
                 <div key={datos.id} id="cont-pelis">
-                  <picture className='picture'>
-                  <Link  href='/Detalles'>
+                  <picture className='picture'> 
                   <img src={`https://image.tmdb.org/t/p/w500${datos.poster_path || datos.profile_path}`} alt='peliculas' className='poster-img' />
-                  </Link>
                   <div className="Ranking">
                   <h4>{Math.floor(datos.vote_average || datos.popularity)+'0%'}</h4>
                   </div>  

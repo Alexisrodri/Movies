@@ -372,3 +372,113 @@ footer {
   text-decoration: none;
   color: #FFF;
 }
+
+
+/* Tablet */
+@media only screen and (max-width : 1000px )  {
+  .Busquedas{
+    max-width:80%;
+  }
+  .buscador-detalles{
+    max-width:400px;
+  }
+  .main{
+    min-height:40vh;
+  }
+  .banner{
+    min-height:100vh;
+  }
+  .cont-all{
+    flex-direction: column;
+    height:100vh;
+  }
+  .poster-img{
+    object-fit: contain;
+  }
+  .img-detail{
+    width:400px;
+    height:400px;
+  }
+  .texts-detail{
+    padding: 0;
+  }
+  .detail-ttl{
+    font-size: 32px;
+  }
+  .Ranking-detail{
+    height:80px;
+  }
+  .detalles-texts{
+    font-size: 20px;
+  }
+  footer{
+    flex-direction:row;
+    height: 405px;
+    justify-content: center;
+    align-items:center;
+    width:100%;
+  }
+  
+}
+
+/* Movil */
+@media only screen and (max-width : 500px ){
+  .header{
+    min-width:calc(100vh - 40vh);
+  }
+  .navbar{
+    font-size:11px;
+    justify-content: space-around;
+  }
+  .navbar ul li{
+    padding:5px;
+  }
+  .Busquedas{
+    max-width:100%;
+  }
+  .buscador-detalles{
+    max-width:200px;
+  }
+  .Ranking{
+    right:380px;
+    height:30px;
+    width:30px;
+    padding:5px;
+  }
+  .card-cont{
+    grid-template-columns:repeat(2,1fr);
+  }
+  footer{
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+    align-items: flex-start;
+    width:100%;
+  }
+  .banner{
+    height:100vh;
+  }
+  .cont-all{
+    flex-direction: column;
+    height:100vh;
+  }
+  .poster-img{
+    object-fit: contain;
+  }
+  .img-detail{
+    width:200px;
+    height:200px;
+  }
+  .texts-detail{
+    padding: 0;
+  }
+  .detail-ttl{
+    font-size: 20px;
+  }
+  .Ranking-detail{
+    height:50px;
+  }
+  .detalles-texts{
+    font-size: 14px;
+  }
+}

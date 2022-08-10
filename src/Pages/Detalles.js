@@ -32,7 +32,7 @@ console.log(data);
         <ul className="ul">
         <li className="li" ><Link href='/' className="link-header" >Inicio</Link></li>
         <li className="li" ><Link href='/Movies' className="link-header" >Peliculas</Link></li>
-        <li className="li" ><Link href='/Tv' className="link-header" >Series de tv</Link></li>
+        <li className="li" ><Link href='/Tv' className="link-header" >Series</Link></li>
         </ul>
         </nav>
         <section className="details-cont">
@@ -61,7 +61,7 @@ console.log(data);
                   <h4 className='rank'> {Math.floor(data.vote_average || data.popularity)+'0%'}</h4>
                   </div> 
                   <h3>Descripcion</h3>
-                  <p>{data.overview}</p>
+                  <p className='detalles-texts'>{data.overview}</p>
           </div>    
             </article>
                   </div>
